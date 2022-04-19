@@ -52,7 +52,6 @@ const App: React.FC<AppProps> = () => {
 
     return (
         <div className="app">
-            Create a Job
             <div className="header">
                 <img src="/logo.png" alt=""/>
             </div>
