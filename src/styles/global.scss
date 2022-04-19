@@ -1,0 +1,28 @@
+@import '~antd/dist/antd.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;900&display=swap');
+@import "variables";
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  background: #fcfcfc;
+}
+
+.header {
+  background: white;
+  height: $header-height;
+  padding: 0 #{$spacing * 4};
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: $spacing * 4 auto;
+}
+
+.app {
+
+}
