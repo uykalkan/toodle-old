@@ -15,6 +15,10 @@ const App: React.FC<AppProps> = () => {
     const {setTodos, todos} = useContext(AppContext)
     const [selectedTodo, setSelectedTodo] = useState<Todo>();
 
+    useEffect(() => {
+        console.log(process.env, 'nv')
+    }, [])
+
     const onFinishSave = (todo: { title: string, priority: number }) => {
 
         if (selectedTodo) {
