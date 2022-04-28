@@ -1,8 +1,8 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useContext, useEffect, useRef} from 'react';
 import {Form, Input, Button, Select, InputRef} from 'antd';
-import {priorities} from "../../mock/priorities";
 import {Callbacks} from "rc-field-form/lib/interface";
 import {Todo} from "../../types/Todo";
+import {AppContext} from "../../providers/AppProvider";
 
 export interface TodoSaveProps {
     onFinish?: Callbacks<{title: string, priority: number}>['onFinish'];
@@ -13,6 +13,7 @@ export interface TodoSaveProps {
 const TodoSave: React.FC<TodoSaveProps> = ({onFinish, onCancel, selectedTodo}) => {
     const [form] = Form.useForm();
     const titleRef = useRef<InputRef>(null);
+    const {priorities} = useContext(AppContext)
 
     useEffect(() => {
         if (!selectedTodo) {
